@@ -22,7 +22,7 @@ namespace FinalProject
 
         public static void InsertOutage()
         {
-            string queryString = $"INSERT INTO dbo.OUTAGES (kLine, dtOff, kReason) VALUES({kLine}, '25.01.2021', 1)";
+            string queryString = $"INSERT INTO dbo.OUTAGES (kLine, dtOff, kReason) VALUES({kLine}, '{dtOutage}', 1)";
 
             SqlCommand command = new SqlCommand(queryString, DataBase.Connection);
             

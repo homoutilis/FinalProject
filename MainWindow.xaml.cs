@@ -23,13 +23,10 @@ namespace FinalProject
             DataBase.SetConnection();
         }
 
-        private void WriteToDB(object sender, RoutedEventArgs e)
+        private void AddOutage()
         {
-            Outage.kLine = txtLine.Text;
-            Outage.InsertOutage();
-            txtLog.Text = Outage.Except;
-            
+            var window = new AddOutage();
+            window.Show();
         }
-        
     }
 }
