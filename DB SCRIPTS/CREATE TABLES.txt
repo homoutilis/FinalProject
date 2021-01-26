@@ -1,0 +1,26 @@
+USE [FinalProject]
+GO
+
+/****** Object:  Table [dbo].[T_KeyValue]    Script Date: 25.01.2021 9:53:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE dbo.REASONS
+(
+	kReason int NOT NULL,
+	nReason nchar(10) NULL,
+	Primary key (kReason)
+) 
+GO
+
+CREATE TABLE dbo.OUTAGES
+(
+	kLine int NOT NULL,
+	dtOff datetime NOT NULL,
+	kReason int NOT NULL,
+	Primary key (kLine, dtOff)
+) 
+GO
