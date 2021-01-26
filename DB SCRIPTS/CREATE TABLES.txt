@@ -1,7 +1,6 @@
 USE [FinalProject]
 GO
 
-/****** Object:  Table [dbo].[T_KeyValue]    Script Date: 25.01.2021 9:53:04 ******/
 SET ANSI_NULLS ON
 GO
 
