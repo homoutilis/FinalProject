@@ -15,24 +15,21 @@ using System.Windows.Shapes;
 
 namespace FinalProject
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow: Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            
-            
+            DataBase.SetConnection();
         }
 
-        private void WriteToLine(object sender, RoutedEventArgs e)
+        private void WriteToDB(object sender, RoutedEventArgs e)
         {
-            DataBase.kLine = txtLine.Text;
-            DataBase.SetConnection();
-            txtLog.Text = DataBase.Except;
+            Outage.kLine = txtLine.Text;
+            Outage.InsertOutage();
+            txtLog.Text = Outage.Except;
             
         }
+        
     }
 }
