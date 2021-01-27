@@ -2,9 +2,6 @@
 
 namespace FinalProject
 {
-    /// <summary>
-    /// Interaction logic for AddOutage.xaml
-    /// </summary>
     public partial class AddOutage: Window
     {
         public AddOutage()
@@ -14,11 +11,15 @@ namespace FinalProject
 
         private void WriteToDB(object sender, RoutedEventArgs e)
         {
-
             if (e.Source == btnOK)
             {
-                var newOutage = new Outage() { kLine = txtLine.Text, dtOutage = cldOutage.SelectedDate.ToString(), 
-                    nReason = cmbReason.Text };
+                if (!Check())
+                    return;
+                var newOutage = new Outage()
+                {
+                    kLine = txtLine.Text, dtOutage = cldOutage.SelectedDate.ToString(),
+                    nReason = cmbReason.Text
+                };
                 newOutage.InsertOutage();
                 txtLog.Text = newOutage.Except;
             }
@@ -26,6 +27,22 @@ namespace FinalProject
             {
                 Close();
             }
+        }
+
+        private bool Check()
+        {
+            if (cmbReason.Text == "")
+            {
+                txtLog.Text = "Выберите причину отключения!";
+                return false;
+            }
+            else if (txtLine.Text == "")
+            {
+                txtLog.Text = "Введите номер линии!";
+                return false;
+            }
+            else
+                return true;
         }
     }
 }
