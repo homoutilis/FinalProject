@@ -8,7 +8,7 @@
         Title="Добавление отключения линии 10кВ" Height="350" Width="791.748" FontSize="14" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
  <Grid>
   <Calendar x:Name="cldOutage" HorizontalAlignment="Left" Height="170" Margin="21,25,0,0" VerticalAlignment="Top" Width="188" 
-   FontWeight="Bold" FontStretch="Normal" IsTodayHighlighted="False" FirstDayOfWeek="Monday" />
+   FontWeight="Bold" FontStretch="Normal" IsTodayHighlighted="True" FirstDayOfWeek="Monday" />
   <StackPanel Margin="231,0,18,0" VerticalAlignment="Top" Height="282">
    <Label HorizontalAlignment="Left" Margin="0,25,0,0" Content="Код линии" VerticalAlignment="Top" Target="{Binding ElementName=txtLine}" />
    <TextBox x:Name="txtLine" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" TextWrapping="Wrap" Width="191" Height="29"/>
