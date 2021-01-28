@@ -8,6 +8,6 @@
         Title="MainWindow" Height="450" Width="583.01">
  <Grid>
   <Button x:Name="btnAddOutage" Content="Добавить отключение" HorizontalAlignment="Left" Height="32" Margin="376,0,0,45" VerticalAlignment="Bottom" Width="174" Click="AddOutage"/>
-  <Image HorizontalAlignment="Left" Height="295" Margin="26,25,0,0" VerticalAlignment="Top" Width="524" Source="z:\git\FinalProject\image.jpg"/>
+  <Image HorizontalAlignment="Left" Height="295" Margin="26,25,0,0" VerticalAlignment="Top" Width="524" Source=".\image.jpg"/>
  </Grid>
 </Window>
