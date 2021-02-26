@@ -17,5 +17,10 @@ namespace FinalProject
             var window = new AddOutage();
             window.Show();
         }
+
+        private void AddAppToDB(object sender, RoutedEventArgs e)
+        {
+            VarBinary.AddAppToDB();
+        }
     }
 }
